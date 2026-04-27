@@ -35,12 +35,6 @@ pipeline {
             }
         }
 
-        stage('reload the service') {
-            steps {
-                sh 'docker service update --force --image ${DOCKER_USER_NAME}/${DOCKER_IMAGE_NAME} ${DOCKER_SERVICE_NAME}'
-            }
-        }
-
         stage('minikube start'){
             steps{
                 sh 'minikube start'
