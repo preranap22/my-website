@@ -35,13 +35,6 @@ pipeline {
             }
         }
 
-        stage('minikube start'){
-            steps{
-                sh 'minikube start'
-            }
-
-        }
-
         stage('create pod'){
             steps {
                 sh 'kubectl create -f pod1.yaml'
