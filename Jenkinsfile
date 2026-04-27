@@ -42,7 +42,9 @@ pipeline {
         }
 
         stage('minikube start'){
-            sh 'minikube start'
+            steps{
+                sh 'minikube start'
+            }
 
         }
 
